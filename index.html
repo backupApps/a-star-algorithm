@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>A Star Algorithm</title>
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <h1>Input Destinasi</h1>
+      <form id="destinationForm">
+         <button type="button" onclick="addDestinations()">
+            TAMBAH TUJUAN
+         </button>
+         <div id="destinationInputs" style="display: flex; flex-wrap: wrap">
+            <div class="destination">
+               <label for="name">Destinasi:</label>
+               <input type="text" class="name" required />
+               <br />
+               <label for="distance">Jarak dari Titik A (g-cost): </label>
+               <input type="number" class="distance" required />
+               <br />
+               <label for="traffic">Estimasi (h-cost): </label>
+               <input type="number" class="traffic" required />
+               <br /><br />
+            </div>
+         </div>
+         <button type="button" onclick="results()">HASIL</button>
+      </form>
+
+      <h2>Daftar Tujuan dan f-cost</h2>
+      <ul id="results"></ul>
+
+      <script src="a-star.js"></script>
+   </body>
+</html>
